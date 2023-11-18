@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" type="image/png" href="./icon.png" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:400,500,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/399902b502.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Bankist</title>
+  </head>
+  <body>
+    <!-- TOP NAVIGATION -->
+    <nav>
+      <p class="welcome">Log in to get started</p>
+      <div class="logo-div">
+        <img title="Login Info" src="logo.png" alt="Logo" class="logo" />
+      </div>
+      <!-- <p class="note-message">hello</p> -->
+      <!-- Note: Users -->
+      <table>
+        <thead>
+          <tr>
+            <th colspan="3">USERS</th>
+          </tr>
+          <tr>
+            <th>Names</th>
+            <th>User</th>
+            <th>Pin</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img class="profilePic" src="photo_2023-05-12_17-39-23.jpg" />
+              Obadea Gbenga
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="10"
+                viewBox="0 0 300 200"
+              >
+                <!-- Green Stripe -->
+                <rect width="100" height="200" fill="#008751" />
+
+                <!-- White Stripe -->
+                <rect x="100" width="100" height="200" fill="#ffffff" />
+
+                <!-- Green Stripe -->
+                <rect x="200" width="100" height="200" fill="#008751" />
+              </svg>
+            </td>
+            <td>og</td>
+            <td>1111</td>
+          </tr>
+          <tr>
+            <td>
+              <img class="profilePic" src="user-1.jpg" />
+              Jonas Schmedtmann <img src="Flag_of_Portugal.svg.webp" />
+            </td>
+            <td>js</td>
+            <td>2222</td>
+          </tr>
+
+          <tr>
+            <td>
+              <img class="profilePic" src="user-3.jpg" />
+              Steven Thomas Williams <img src="Flag_of_Japan.svg.webp" />
+            </td>
+            <td>stw</td>
+            <td>3333</td>
+          </tr>
+          <tr>
+            <td>
+              <img class="profilePic" src="user-2.jpg" />
+              Sarah Smith <img src="Flag_of_India.svg.png" />
+            </td>
+            <td>ss</td>
+            <td>4444</td>
+          </tr>
+          <tr>
+            <td>
+              <img class="profilePic" src="user-5.jpg" />
+              Jessica Davis
+              <img src="Flag_of_the_United_States.svg.png" />
+            </td>
+            <td>jd</td>
+            <td>5555</td>
+          </tr>
+        </tbody>
+      </table>
+      <form class="login">
+        <input
+          type="text"
+          placeholder="user"
+          class="login__input login__input--user"
+        />
+        <!-- In practice, use type="password" -->
+        <input
+          type="text"
+          placeholder="PIN"
+          maxlength="4"
+          class="login__input login__input--pin"
+        />
+        <button class="login__btn">&rarr;</button>
+      </form>
+    </nav>
+
+    <!-- Notification -->
+    <div class="notification">
+      <div class="alert hide">
+        <span class="fas fa-exclamation-circle"></span>
+        <span class="msg">Warning: This is a warning alert</span>
+        <span class="close-btn">
+          <span class="fas fa-times"></span>
+        </span>
+      </div>
+    </div>
+
+    <!-- timer log out notify and overlay-->
+    <div class="modal hidden">
+      <button class="close-modal">&times;</button>
+      <i class="fa-solid fa-triangle-exclamation" style="color: #ff0000"></i>
+      <p>Session Expired</p>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <!-- ----------------------------------- -->
+
+    <!-- ---------------------------------- -->
+
+    <main class="app">
+      <!-- BALANCE -->
+      <div class="balance">
+        <div>
+          <p class="balance__label">Current balance</p>
+          <p class="balance__date">
+            As of <span class="date">08/17/2023</span>
+          </p>
+        </div>
+        <p class="balance__value">0000€</p>
+      </div>
+
+      <!-- MOVEMENTS -->
+      <div class="movements">
+        <div class="movements__row">
+          <div class="movements__type movements__type--deposit">2 deposit</div>
+          <div class="movements__date">3 days ago</div>
+          <div class="movements__value">4 000€</div>
+        </div>
+        <div class="movements__row">
+          <div class="movements__type movements__type--withdrawal">
+            1 withdrawal
+          </div>
+          <div class="movements__date">24/01/2037</div>
+          <div class="movements__value">-378€</div>
+        </div>
+      </div>
+
+      <!-- SUMMARY -->
+      <div class="summary">
+        <p class="summary__label">In</p>
+        <p class="summary__value summary__value--in">0000€</p>
+        <p class="summary__label">Out</p>
+        <p class="summary__value summary__value--out">0000€</p>
+        <p class="summary__label">Interest</p>
+        <p class="summary__value summary__value--interest">0000€</p>
+        <button class="btn--sort">&downarrow; SORT</button>
+      </div>
+
+      <!-- OPERATION: TRANSFERS -->
+      <div class="operation operation--transfer">
+        <h2>Transfer money</h2>
+        <form class="form form--transfer">
+          <input type="text" class="form__input form__input--to" />
+          <input type="number" class="form__input form__input--amount" />
+          <button class="form__btn form__btn--transfer">&rarr;</button>
+          <label class="form__label">Transfer to</label>
+          <label class="form__label">Amount</label>
+        </form>
+      </div>
+
+      <!-- OPERATION: LOAN -->
+      <div class="operation operation--loan">
+        <h2>Request loan</h2>
+        <form class="form form--loan">
+          <input type="number" class="form__input form__input--loan-amount" />
+          <button class="form__btn form__btn--loan">&rarr;</button>
+          <label class="form__label form__label--loan">Amount</label>
+        </form>
+      </div>
+
+      <!-- OPERATION: CLOSE -->
+      <div class="operation operation--close">
+        <h2>Close account</h2>
+        <form class="form form--close">
+          <input type="text" class="form__input form__input--user" />
+          <input
+            type="password"
+            maxlength="6"
+            class="form__input form__input--pin"
+          />
+          <button class="form__btn form__btn--close">&rarr;</button>
+          <label class="form__label">Confirm user</label>
+          <label class="form__label">Confirm PIN</label>
+        </form>
+      </div>
+
+      <!-- LOGOUT TIMER -->
+      <p class="logout-timer">
+        You will be logged out in <span class="timer">05:00</span>
+      </p>
+    </main>
+
+    <!-- <footer>
+      &copy; by Obadea Gbenga. Don't claim as your own :)
+    </footer> -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
