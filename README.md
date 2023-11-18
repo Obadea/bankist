@@ -12,4 +12,5 @@ Welcome to bankist
 | Sarah Smith            | ss   | 4444 |
 | Jessica Davis          | jd   | 5555 |
 
-You will be logged out after 5 minutes of inactive
+Note: Use the User and Pin to login
+Note: You will be logged out after 5 minutes of inactive
