@@ -15,3 +15,5 @@ Welcome to bankist
 Note: Use the User and Pin to login
 
 Note: You will be logged out after 5 minutes of inactive
+
+Note: You can only transfer to accounts(Users) available in the table.
